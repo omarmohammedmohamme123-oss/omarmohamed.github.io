@@ -1,0 +1,229 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+}
+
+/* ===== Layout ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+/* ===== Header & Footer ===== */
+header {
+    background: linear-gradient(135deg, #2e8b57, #1d3557);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+footer {
+    background: linear-gradient(135deg, #2e8b57, #1d3557);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Modern Navigation ===== */
+nav {
+    background: #ffffff;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 14px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 18px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #1d3557;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    background: #2e8b57;
+    color: #fff;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Table ===== */
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.course-table thead tr {
+    background-color: #457b9d;
+    color: #fff;
+}
+
+.course-table th, .course-table td {
+    padding: 15px;
+    border: 1px solid #a8dadc;
+    text-align: center;
+}
+
+.course-table tbody tr:hover {
+    background-color: #f1faee;
+    transition: background 0.3s ease;
+}
+
+/* ===== Form ===== */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #1d3557;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #a8dadc;
+    border-radius: 6px;
+    transition: border 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #457b9d;
+}
+
+/* ===== Buttons ===== */
+.submit {
+    background: linear-gradient(135deg, #2e8b57, #1d3557);
+    color: #fff;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.submit:hover {
+    background: #e63946;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 1024px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        margin: 10px;
+    }
+    main {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+        border-radius: 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 8px 0;
+    }
+    .course-table th, .course-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .course-table {
+        display: block;
+        overflow-x: auto;
+        font-size: 13px;
+    }
+    .form-group input, .form-group textarea {
+        padding: 8px;
+    }
+    .submit {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+}
